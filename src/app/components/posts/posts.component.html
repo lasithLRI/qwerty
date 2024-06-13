@@ -1,0 +1,20 @@
+<ul class="list-group list-group-flush" *ngFor="let post of postsList.postsList">
+  <li class="list-group-item" >
+    <div class="d-flex">
+      <img src="{{post.imagesList.urls[0]}}" class="img-thumbnail col-3" alt="...">
+      <div class="align-content-center flex-fill ms-3">
+        <h5>{{post.product.title }}</h5>
+        <div class="d-flex justify-content-between mt-0 mb-2">
+          <span>{{post.product.userName}}</span><span>{{post.product.date}}</span>
+        </div>
+        <p>{{post.product.description}}</p>
+        <div class="d-flex justify-content-between mt-5">
+          <span>{{post.product.price | currency}}</span>
+          <button type="button" class="btn btn-outline-primary mb-1 btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Primary</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </li>
+
+</ul>
